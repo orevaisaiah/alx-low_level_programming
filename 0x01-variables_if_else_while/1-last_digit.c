@@ -20,7 +20,7 @@ int main(void)
 	if (m > 5)
 		printf("and is greater than 5\n");
 	if (m == 0)
-		printf("and is zero\n");
+		printf("and is 0\n");
 	if (m < 6 && m != 0)
 		printf("and is less than 6 and not 0\n");
 	return (0);
