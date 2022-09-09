@@ -4,7 +4,7 @@
  * main - prints alphabet a - z all in lower case
  * followed by a new line
  * Return: Always 0 (Success)
- * */
+ */
 
 int main(void)
 {
