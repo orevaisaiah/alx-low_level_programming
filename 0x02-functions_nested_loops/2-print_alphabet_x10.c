@@ -1,13 +1,11 @@
 #include "main.c"
 
 /**
- * main - Entry point of the program,
- * prints  prints 10 times the alphabet, in lowercase,
- * followed by a new line.
- * Return: 0 (Success)
+ * print_alphabet_x10 - prints  prints 10 times the alphabet
+ * in lowercase, followed by a new line.
  */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 	int i;
 

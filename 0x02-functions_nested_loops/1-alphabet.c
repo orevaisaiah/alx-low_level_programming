@@ -1,10 +1,8 @@
 #include "main.c"
 
 /**
- * main - Entry point of the program,
- * function the prints lower case alphabet,
+ * print_alphabet - function the prints lower case alphabet,
  * followed by a new line.
- * Return: 0 (Success)
  */
 
 void print_alphabet(void)
