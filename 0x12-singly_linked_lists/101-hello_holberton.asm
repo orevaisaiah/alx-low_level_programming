@@ -1,9 +1,9 @@
-global _start
+global main
 section .data
    msg: db "Hello, Holberton",0xa
    len: equ $-msg
 section .text
-_start:
+main
    mov eax, 4
    mov ebx, 1
    mov ecx, msg
