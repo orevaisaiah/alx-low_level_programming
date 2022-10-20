@@ -1,14 +1,17 @@
-global main
 section .data
-   msg: db "Hello, Holberton",0xa
-   len: equ $-msg
+	msg: db "Hello, Holberton", 0ah
+
+global main
 section .text
+extern  printf
+
 main
-   mov eax, 4
-   mov ebx, 1
-   mov ecx, msg
-   mov edx, len
-   int 0x80
-   mov al, 1
-   mov ebx, 0
-   int 0x80
+	mov edx, 17     ; number of chars to write, plus 0ah (hex for '\n')
+	mov ecx, msg    ; move the mem address of our string into ecx
+	mov ebx, 1      ; write to the STDOUT file
+	mov eax, 4      ; invoke SYS_WRITE (kernel opcode 4)
+	int 80h	    	; call kernel. mov eax-mov edx can also be reversed
+
+	mov ebx, 0      ; return 0 exit status
+	mov eax, 1      ; invoke SYS_EXIT (kernel opcode 1)
+	int 80h	    	; call kernel. mov eax-mov ebx can also be reversed
