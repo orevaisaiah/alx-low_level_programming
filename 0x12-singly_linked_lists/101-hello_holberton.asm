@@ -1,11 +1,14 @@
- global  _main
-    extern  _printf
-
-    section .text
-_main:
-    push    message
-    call    _printf
-    add     esp, 4
-    ret
-message:
-    db  'Hello, Holberton', 0
+global _start
+section .data
+   msg: db "Hello, Holberton",0xa
+   len: equ $-msg
+section .text
+_start:
+   mov eax, 4
+   mov ebx, 1
+   mov ecx, msg
+   mov edx, len
+   int 0x80
+   mov al, 1
+   mov ebx, 0
+   int 0x80
