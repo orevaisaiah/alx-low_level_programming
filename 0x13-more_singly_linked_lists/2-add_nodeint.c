@@ -7,7 +7,7 @@
  *
  * Return: a pointer to new element, or NULL if it fails
  */
-listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	list_t *new;
 
